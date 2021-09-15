@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Open+Sans&display=swap');
+
+
+#title-text {
+  text-align: center;
+  font-family:'Fredoka One', cursive; 
+  -webkit-text-stroke: 1px  black;
+  
+  
+}
+.color-text-1 {
+  background-image: linear-gradient(to left, blue, purple,green, gold, orange, red);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 70px;
+
+}
+
+.color-text-2 {
+  background-image: linear-gradient(to left, blue, purple,green, gold, orange, red);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+}
+
+/* ----------------the game squares------------------------- */
+.container {
+    height: 60vh;
+    margin-top: 1rem;
+    margin-left: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1px 1px;
+    padding: 0; 
+  }
+  .cell {
+    width: 80%;
+    height: 80%;
+    padding: 0;
+  
+    margin: 1%;
+    overflow: hidden;
+  }
+  .cell-1 {
+    background: red;
+  }
+  .cell-2 {
+    background: blue;
+  }
+  .cell-3 {
+    background: green;
+  }
+  .cell-4 {
+    background: gold;
+  }
+  .cell-5 {
+    background: red;
+  }
+  .cell-6 {
+    background: blue;
+  }
+  .cell-7 {
+    background: purple;
+  }
+  .cell-8 {
+    background: green;
+  }
+  .cell-9 {
+    background: red;
+  }
+  .cell-10 {
+    background: blue;
+  }
+  .cell-11 {
+    background: purple;
+  }
+  .cell-12 {
+    background: red;
+  }
+  .cell-13 {
+    background: blue;
+  }
+  .cell-14 {
+    background: gold;
+  }
+  .cell-15 {
+    background: orange;
+  }
+  .cell-16 {
+    background: green;
+  }
+  .cell-17 {
+    background: orange;
+  }
+  .cell-18 {
+    background: lightseagreen;
+  }
+  .cell-19 {
+    background: red;
+  }
+  .cell-20 {
+    background: blue;
+  }
+  .cell-21 {
+    background: gold;
+  }
+  .cell-22 {
+    background: green;
+  }
+  .cell-23 {
+    background: red;
+  }
+  .cell-24 {
+    background: gold;
+  }
+  .cell-25 {
+    background: purple;
+  }
+
+  /*------------------------------------------*/
