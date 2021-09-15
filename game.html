@@ -32,7 +32,6 @@
              </nav>
          </div>
      </header>
-    <div>the grid</div>
     <div class="container">
         <div class="cell cell-1"></div>
         <div class="cell cell-2"></div>
@@ -62,16 +61,34 @@
       </div>
 
 
-    <div>difficulty level</div>
-    <div>start game</div>
-   
+    <div id="difficulty">
+        <p id="diff-msg">Difficulty Level</p>
+        <form action="/action_page.php" class="diff-game">
+            <input list="levels" name="level" required>
+            <datalist id="levels">
+              <option value="Easy">
+              <option value="Medium">
+              <option value="Hard">
+            </datalist>
+            <input type="button" value="Start the game" id="start-game">
+          </form>
+
+          <p class="answer-message">Enter Answer:</p>
+          <input id="answer-box" type="number">
+      
+      <button data-type="submit" class="btn btn-outline-danger">Submit Answer</button>
+    </div>
+    
     <div class="score-area">
         <p class="scores">Correct Answers <span id="score">0</span></p>
         <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
     </div>
-    <div>previous game scores</div>
+    <div class="prev-game-score">
+        <p>previous game scores</p>
+        <p class="prev-score">difficulty level <span id="diff-level">Easy</span>  Score <span id="total-score">0</span></p>
+    </div>
 
-    <div>footer</div>
+   
 
     <script src="assets/js/script.js"></script>   
 </body>

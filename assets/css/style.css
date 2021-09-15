@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Open+Sans&display=swap');
 
+/*---------------------------header------------------------------------------*/
 
 #title-text {
   text-align: center;
   font-family:'Fredoka One', cursive;
-  -webkit-text-stroke: 1px  black;
-  
-  
+  -webkit-text-stroke: 4px  black;
+  padding: 0;
 }
+#title-text h1 {
+  margin: 0;
+  background-image: linear-gradient(to left, red, orange, gold, green, purple, blue);
+  -webkit-background-clip:content-box;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+  
+
 .color-text-1 {
   background-image: linear-gradient(to left, blue, purple,green, gold, orange, red);
   -webkit-background-clip: text;
@@ -17,6 +27,8 @@
   font-size: 70px;
 
 }
+
+
 
 .color-text-2 {
   background-image: linear-gradient(to left, blue, purple,green, gold, orange, red);
@@ -55,7 +67,7 @@
   margin-left: 0;
   margin-right: 0;
 }
-
+/*-----------------------------------------body--------------------------------------------------*/
 /* ----------------the game squares------------------------- */
 .container {
     height: 60vh;
@@ -127,7 +139,7 @@
     background: orange;
   }
   .cell-18 {
-    background: lightseagreen;
+    background: purple;
   }
   .cell-19 {
     background: red;
@@ -151,4 +163,61 @@
     background: purple;
   }
 
-  /*------------------------------------------*/
+  /*---------------------game buttons---------------------*/
+
+  #difficulty {
+    margin-right: 0px;
+    margin-left: 60px;
+  width: 80%;
+  height: 60%;
+  padding: 0;
+  text-align: center;
+  
+  }
+
+  #diff-msg {
+    display: inline-block;
+    font-family: 'Fredoka One', cursive;
+    color: red;
+  }
+
+  .diff-game {
+    width:auto;
+    display: inline-block;
+    margin-left: 50;
+  }
+
+  #start-game {
+    display: inline-block;
+    width: auto;
+    margin-left: 30px;
+    margin-top: 0;
+    color: red;
+    background-color:rgb(118, 211, 118);
+  }
+  
+
+  .answer-message {
+    height: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 50px;
+  }
+
+
+#answer-box {
+	width: 60px;
+	display: inline-block;
+  margin: 0;
+  
+}
+
+
+.btn {
+	height: auto;
+  width: auto;
+	display: inline-block;
+  margin-right: 0px;
+  
+}
