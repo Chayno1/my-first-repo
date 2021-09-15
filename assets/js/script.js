@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
+//document.addEventListener("DOMContentLoaded", function() {
 
-});
+//});
 
 let running = false;
 let startButton = document.getElementById("start-game");
@@ -15,24 +15,24 @@ startButton.addEventListener('click', function() {
     }
 })
 
-runGame()
+//runGame()
 
-DifficultSetting()
+//DifficultSetting()
 
-calculateCorrectAnswer()
+//calculateCorrectAnswer()
 
-revomeVisibilty()
+//revomeVisibilty()
 
-checkAnswer()
+//checkAnswer()
 
-incrementScore()
+//incrementScore()
 
-incrementWrongScore()
+//incrementWrongScore()
 
-endGame()
+//endGame()
 
 let colors = [ 'blue', 'purple', 'green', 'gold', 'orange', 'red'];
-let recs = document.getElementsByClassName("cells");
+let recs = document.getElementsByClassName("cell");
 let totalColors = colors.length;
 let rand = Math.random();
 let randIndex = Math.floor(rand * totalColors);
@@ -41,11 +41,13 @@ let randomColor = colors[randIndex];
 
 function changeColors() {
     if (running) {
-        recs.forEach(color =>{
+        recs.style.backgroundColor(color =>{
         color.style.background = randomColor;
-    })
+    });
     }
     }
 
-previousScore()
+   
+
+//previousScore()
 
