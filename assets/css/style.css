@@ -168,7 +168,7 @@
   #difficulty {
     margin-right: 0px;
     margin-left: 60px;
-  width: 80%;
+  width:80%;
   height: 60%;
   padding: 0;
   text-align: center;
@@ -203,6 +203,7 @@
     display: inline-block;
     text-align: center;
     margin-left: 50px;
+    font-family: 'Fredoka One', cursive;
   }
 
 
@@ -219,5 +220,45 @@
   width: auto;
 	display: inline-block;
   margin-right: 0px;
+  font-family: 'Fredoka One', cursive;
+}
+
+/*----------------------scores-----------------------------------*/
+
+
+.score-area {
+  text-align: center;
+  padding: 0;
+  margin-right: 60px;
+  margin-top: -0px;
+  margin-bottom: 0;
+  z-index: 9;
   
+}
+.scores {
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: 'Fredoka One', cursive;
+}
+
+.prev-game-score {
+  text-align: center;
+  margin-right: 80px;
+}
+
+.prev-score {
+  font-family: 'Fredoka One', cursive;
+  display: inline;
+  margin-left: 50px;
+}
+
+#diff-level {
+  color: red;
+}
+
+#total-score {
+  color:red;
 }
