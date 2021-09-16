@@ -1,29 +1,7 @@
-//document.addEventListener("DOMContentLoaded", function() {
-
-//});
-
-
-let startButton = document.getElementById("start-game");
-
-startButton.addEventListener('click', function() {
-return changeColors();
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(changeColors() * 5, 99999999999999999);
 });
 
-//runGame()
-
-//DifficultSetting()
-
-//calculateCorrectAnswer()
-
-//revomeVisibilty()
-
-//checkAnswer()
-
-//incrementScore()
-
-//incrementWrongScore()
-
-//endGame()
 
 
 function changeColors() {
@@ -35,8 +13,26 @@ function changeColors() {
         recs[i]. style. backgroundColor = randomColor;
     }
     }
+
+
+let startButton = document.getElementById("start-game");
+
+startButton.addEventListener('click', function() {
+return changeColors();
+});
+
+
+
+function calculateCorrectAnswer() {
+    let box = recs;
+    let boxCol = box.getAttribute(backgroundcolor);
+    for(let i = 0; i < boxCol. length; i++) {
+       return boxCol;
+} 
+   
     
-        
-    
-//previousScore()
+
+
+
+
 
