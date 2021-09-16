@@ -2,18 +2,12 @@
 
 //});
 
-let running = false;
+
 let startButton = document.getElementById("start-game");
 
 startButton.addEventListener('click', function() {
-    if (running) {
-        running = false
-        changeColors()
-    } else {
-        running = true
-        changeColors()
-    }
-})
+return changeColors();
+});
 
 //runGame()
 
@@ -31,23 +25,32 @@ startButton.addEventListener('click', function() {
 
 //endGame()
 
-let colors = [ 'blue', 'purple', 'green', 'gold', 'orange', 'red'];
-let recs = document.getElementsByClassName("cell");
-let totalColors = colors.length;
-let rand = Math.random();
-let randIndex = Math.floor(rand * totalColors);
-let randomColor = colors[randIndex];
 
 
-function changeColors() {
-    if (running) {
-        recs.style.backgroundColor(color =>{
-        color.style.background = randomColor;
-    });
-    }
-    }
+/*
+    function changeColors() {
+        let colors = [ 'blue', 'purple', 'green', 'gold', 'orange', 'red'];
+        let rand = Math.floor(Math.random()*6);
+        let randomColor = colors[rand];
+        let recs = document.getElementsByClassName("cell");
+        for(let i = 0; i < recs. length; i++){
+            recs[i]. style. backgroundColor = randomColor;
+        }
+        }
+*/
 
-   
-
+    function changeColors() {
+        let colors = [ 'blue', 'purple', 'green', 'gold', 'orange', 'red'];
+        let rand = Math.floor(Math.random()*6);
+        let randomColor = colors[rand];
+        let recs = document.getElementsByClassName("cell");
+        for(let i = 0; i < recs. length; i++){ 
+            for (let rec of recs) {
+            rec. style. backgroundColor = randomColor;
+        }
+        }
+        }
+        
+        ​
 //previousScore()
 
