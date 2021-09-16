@@ -26,31 +26,17 @@ return changeColors();
 //endGame()
 
 
-
-/*
-    function changeColors() {
-        let colors = [ 'blue', 'purple', 'green', 'gold', 'orange', 'red'];
+function changeColors() {
+    let colors = [ 'blue', 'purple', 'green', 'gold', 'orange', 'red'];
+    let recs = document.getElementsByClassName("cell");
+    for(let i = 0; i < recs. length; i++){
         let rand = Math.floor(Math.random()*6);
         let randomColor = colors[rand];
-        let recs = document.getElementsByClassName("cell");
-        for(let i = 0; i < recs. length; i++){
-            recs[i]. style. backgroundColor = randomColor;
-        }
-        }
-*/
-
-    function changeColors() {
-        let colors = [ 'blue', 'purple', 'green', 'gold', 'orange', 'red'];
-        let rand = Math.floor(Math.random()*6);
-        let randomColor = colors[rand];
-        let recs = document.getElementsByClassName("cell");
-        for(let i = 0; i < recs. length; i++){ 
-            for (let rec of recs) {
-            rec. style. backgroundColor = randomColor;
-        }
-        }
-        }
+        recs[i]. style. backgroundColor = randomColor;
+    }
+    }
+    
         
-        ​
+    
 //previousScore()
 
