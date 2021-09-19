@@ -62,18 +62,22 @@ let submitAnswer = document.getElementById("submit-answer");
 
 submitAnswer.addEventListener('click', function() {
     let answerBox = document.getElementById("answer-box");
-    if (answerBox.value == numberReds) {
-        correctScore ++;
-        alert("Well Done!! You Guessed Correct!!!");
-    } else {
-        wrongScore ++;
-        alert("Oh No!, that was wrong, try again!!!");
-    }
-    let score = document.getElementById("score");
-    let incorrectScore = document.getElementById("incorrect");
+    if ( answerBox.value) {
+        if (answerBox.value == numberReds) {
+            correctScore ++;
+            alert("Well Done!! You Guessed Correct!!!");
+        } else {
+            wrongScore ++;
+            alert("Oh No!, that was wrong, try again!!!");
+        }
+        let score = document.getElementById("score");
+        let incorrectScore = document.getElementById("incorrect");
 
-    score.innerText = correctScore;
-    incorrectScore.innerText = wrongScore;
+        score.innerText = correctScore;
+        incorrectScore.innerText = wrongScore;
+    } else {
+        alert("Please put in an Answer");
+    }
 });
 
 
