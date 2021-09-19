@@ -1,79 +1,99 @@
 document.addEventListener("DOMContentLoaded", function() {
-    changeColors().repeat(999, 9999) *999;
+    changeColors();
 });
 
 
 
 function changeColors() {
+    numberReds = 0;
     let colors = [ 'blue', 'purple', 'green', 'gold', 'orange', 'red'];
     let recs = document.getElementsByClassName("cell");
     for(let i = 0; i < recs. length; i++){
         let rand = Math.floor(Math.random()*6);
-        let randomColor = colors[rand];
+        var randomColor = colors[rand];
+        if (randomColor == "red") {
+            numberReds ++;
+        }
         recs[i]. style. backgroundColor = randomColor;
     }
     }
 
 
-    let startButton = document.getElementById("start-game");
+
+
+let startButton = document.getElementById("start-game");
+
 
 startButton.addEventListener('click', function() {
-         if(level == true) {
-             runGame(level);
-         } else {
-             alert('You need to select a Difficulty Level!');
-         }
+    let difficulty = document.getElementById("diff-options");
+    runGame(difficulty.value);
 });
 
 
+function runGame(difficulty) {
+    changeColors();
+    let displayTime = 0;
+    if (difficulty == 'easy'){
+        displayTime = 2;    
+    } else if (difficulty =='medium'){
+        displayTime = 1;
+    }else if (difficulty == "hard"){
+        displayTime = 0.5;
+    }else {
+        alert("select diffuclty level!!!");
+    }
+    setTimeout(hideColors, displayTime * 1000);
+};
+
+function hideColors() {
+    let recs = document.getElementsByClassName("cell");
+    for(let i = 0; i < recs. length; i++){
+        recs[i]. style. backgroundColor = "black";
+    }
+};
+
+
+
+/*----------------------Answer functions---------------*/
+
+var correctScore = 0;
+var wrongScore = 0;
+var numberReds = 0;
 
 function calculateCorrectAnswer() {
-     let box = document.getElementsByClassName("cell");
-    for(let i = 0; i < box. length; i++) {
-        let redScore = "0";
-        let otherScore = "0";
-        if(box[i].style.backgroundColor = 'red') {
-            redScore + 1;
-        } else {
-          otherScore + 1;
-        }
-    }
-} 
-  let gameType = level;
+    if ( randomColor == 'red') {
+        correctScore + 1;
+        console.log(correctScore);
+     } else {
+         wrongScore + 1;
+         console.log(wrongScore);
+     }
+  
+}
 
-function runGame(gameType) {
-    
-    if (gameType === 'easy') {
-        changeColors().hide('slow')
-    } else if (gameType === 'medium') {
-        changeColors().hide('medium')
-    } else if (gameType === 'hard'){
-        changeColors().hide('fast')
+/*--------checkAnswer()------------*/
+
+
+let submitAnswer = document.getElementById("submit-answer");
+
+submitAnswer.addEventListener('click', function() {
+    let answerBox = document.getElementById("answer-box");
+    if (answerBox.value == numberReds) {
+        correctScore ++;
+        alert("Well Done!! You Guessed Correct!!!");
     } else {
-        alert('game type unknown!')
+        wrongScore ++;
+        alert("Oh No!, that was wrong, try again!!!");
     }
+    let score = document.getElementById("score");
+    let incorrectScore = document.getElementById("incorrect");
 
-}
-
-function difficulty(){
-    let level = document.getElementById("levels");
-    let easy = level[0];
-    let medium = level[1];
-    let hard = level[3];
-        if (level) {
-            level == easy;
-        } else if (level){
-            level == medium;
-        } else if (level){
-            level == hard;
-        } else {
-            alert('You need to select a Difficulty Level!')
-        }
-}
+    score.innerText = correctScore;
+    incorrectScore.innerText = wrongScore;
+});
 
 
 /*
-
 
 
 

@@ -65,30 +65,25 @@
     <div id="difficulty">
         <p id="diff-msg">Difficulty Level</p>
         <form action="/action_page.php" class="diff-game">
-            <input list="levels" name="level" required>
-            <datalist id="levels">
-              <option id="easy" value="Easy" name="level">
-              <option id="medium"value="Medium">
-              <option id="hard" value="Hard">
-            </datalist>
+            <select id="diff-options" list="levels" name="level" required>
+              <option value="easy" >Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
             <input type="button" value="Start the game" id="start-game">
           </form>
 
           <p class="answer-message">Enter Answer:</p>
           <input id="answer-box" type="number" required>
       
-      <button data-type="submit" class="btn btn-outline-danger">Submit Answer</button>
+      <button data-type="submit" class="btn btn-outline-danger" id="submit-answer">Submit Answer</button>
     </div>
     
     <div class="score-area">
         <p class="scores">Correct Answers <span id="score">0</span></p>
         <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
     </div>
-    <div class="prev-game-score">
-        <p class="prev-score">previous game score:-</p>
-        <p class="prev-score">difficulty level :- <span id="diff-level"> Easy</span></p> 
-        <p class="prev-score">Score :- <span id="total-score"> 0</span></p>
-    </div>
+   
 
    
 
