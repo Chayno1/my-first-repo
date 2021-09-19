@@ -67,7 +67,7 @@
   margin-left: 0;
   margin-right: 0;
 }
-/*-----------------------------------------body--------------------------------------------------*/
+/*-----------------------------------------body game.html--------------------------------------------------*/
 /* ----------------the game squares------------------------- */
 .container {
     height: 60vh;
@@ -262,3 +262,73 @@
 #total-score {
   color:red;
 }
+
+/*------------------------------------body index.html----------------------*/
+
+
+
+#sub-title {
+  color: blue;
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#sub-title span {
+  color: red;
+}
+
+#play-now {
+  color: red;
+  font-family: 'Fredoka One', cursive; 
+  text-align: center;
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+#rules {
+  color: red;
+  font-family: 'Fredoka One', cursive;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+#rule-list {
+  font-family: 'Fredoka One', cursive;
+  color: black;
+  font-size: 18px;
+}
+
+
+/*---------------------index.html pictures--------------------*/
+
+
+#pic-diff{
+  height: 80px;
+  width: 300px;
+}
+
+#pic-game{
+  height: 80px;
+  width: 280px;
+}
+
+#pic-submit {
+  height: 80px;
+  width: 480px;
+}
+
+#pic-tally {
+  height: 80px;
+  width: 580px;
+}
+
+#pic-recs {
+  width:800px;
+  height: 300px;
+  margin-left: 300px;
+}
+
