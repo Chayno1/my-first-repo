@@ -2,8 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
     changeColors();
 });
 
+// start button operation
+let startButton = document.getElementById("start-game");
 
+startButton.addEventListener('click', function() {
+    let difficulty = document.getElementById("diff-options");
+    runGame(difficulty.value);
+});
 
+// color change rectangles and counting reds
 function changeColors() {
     numberReds = 0;
     let colors = [ 'blue', 'purple', 'green', 'gold', 'orange', 'red'];
@@ -18,17 +25,7 @@ function changeColors() {
     }
     }
 
-
-
-
-let startButton = document.getElementById("start-game");
-
-
-startButton.addEventListener('click', function() {
-    let difficulty = document.getElementById("diff-options");
-    runGame(difficulty.value);
-});
-
+/*----------------- Main game Operations--------------------- */
 
 function runGame(difficulty) {
     changeColors();
@@ -60,19 +57,6 @@ var correctScore = 0;
 var wrongScore = 0;
 var numberReds = 0;
 
-function calculateCorrectAnswer() {
-    if ( randomColor == 'red') {
-        correctScore + 1;
-        console.log(correctScore);
-     } else {
-         wrongScore + 1;
-         console.log(wrongScore);
-     }
-  
-}
-
-/*--------checkAnswer()------------*/
-
 
 let submitAnswer = document.getElementById("submit-answer");
 
@@ -93,13 +77,3 @@ submitAnswer.addEventListener('click', function() {
 });
 
 
-/*
-
-
-
-difficulty()
-
-
-
-
-*/
